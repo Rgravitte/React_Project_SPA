@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -29,4 +31,110 @@
   to {
     transform: rotate(360deg);
   }
+}
+.tblHead{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: underline;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.plyrTbl{
+  width: 18vw;
+  border: 2px solid white;
+  padding: 5vh;
+  background-color: #720012;
+  border-radius: 25px;
+  color: white;
+  margin-top: 10vh;
+}
+.scoreBrdAlign{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #82816D;
+  height: 100vh;
+}
+.tblDataHolder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-top: 1vh;
+}
+.inputHlder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inputHlder > form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inputHlder > form > input{
+  margin-bottom: 1vh;
+  text-align: center;
+}
+.tblData{
+  border: 1px solid #8EB94D;
+  border-collapse: collapse;
+  width: 33vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1vw; */
+}
+.tblButtons{
+  background-color: #8EB94D;
+  color: black;
+  width: 4vw;
+  font-size: 13px;
+  font-weight: bold;
+  height: 4vh;
+  border-radius: 5px;
+  margin: 8px;
+}
+.tblDataEmoji{
+  background-color: #8EB94D;
+  color: black;
+  width: 3vw;
+  font-size: 20px !important;
+  width: 4vw;
+  border-radius: 5px;
+  margin: 8px;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nameAndScore{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.inlinePoints{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 1vw;
+}
+.inlinePoints > div{
+  margin-top: -24px;
+  font-size: 32px;
+}
+.inlinePoints > p{
+  font-weight: bolder;
+  font-family: monospace;
+  font-size: 20px;
+}
+.nameAndScore > h2{
+  margin-top: -20px;
 }
