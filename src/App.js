@@ -11,8 +11,37 @@ class App extends Component {
     points: 0,
   
   }
+  playerDisplay = (players) => {
+    if(players === 1){
+      return(
+        <div>
+          <Scoreboard pointTotal={ this.state.points }/>
+        </div>
+      )
+    }
+    if(players === 2){
+      return(
+        <div>
+          <Scoreboard pointTotal={ this.state.points }/>
+          <Scoreboard pointTotal={ this.state.points }/>
+        </div>
+      )
+    }
+  }
  
-  num = 0;
+  playerCount = () => {
+    return(
+    <div>
+    <h1>Welcome</h1>
+    <p>Easily track the score for your game of darts</p>
+    <h2>Choose how many players</h2>
+    <button onClick={this.playerDisplay(1)}>Single Player</button>
+    <button onClick={this.playerDisplay(2)}>Two Player</button>
+    <button>three Player</button>
+    <button>Four Player</button>
+    </div>
+    )
+  }
 
   // this function updates all the data in the table - making a new component that i will use in the ScoreboardTable Component so that they work for each peice
 //  keepScore = () => {
@@ -48,6 +77,8 @@ anotherFunction(){
       <div>
         <div className='scoreBrdAlign'>
           <Scoreboard pointTotal={ this.state.points }></Scoreboard>
+          <Scoreboard pointTotal={ this.state.points }></Scoreboard> 
+          <Scoreboard pointTotal={ this.state.points }></Scoreboard> 
           <Scoreboard pointTotal={ this.state.points }></Scoreboard> 
         </div>
       </div>
