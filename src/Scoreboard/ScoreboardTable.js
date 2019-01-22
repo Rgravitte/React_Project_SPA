@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import Tallys from './Tally';
 
 
 
-class Scoreboard extends Component {
+class PlayerName extends Component {
 
   state = {
     name: "",
-    showForm: true
+    showForm: true,
+    score: 0
   }
-  
+  scoreTotal = (num) => {
+    this.setState({
+      score: this.state.score + num
+    })
+  }
   playerName = (event) =>{
     this.setState({
       name: event.target.value
@@ -34,6 +40,7 @@ class Scoreboard extends Component {
           <button type="submit" onClick={  this.hideForm }>Submit</button>
         </form>
         </div>
+        
       </div>
       :
       <div>
@@ -41,54 +48,37 @@ class Scoreboard extends Component {
         <h2>{ this.state.name }</h2>
         <div className="inlinePoints">
           <p>Score:</p>
-          <div>{this.props.pointTotal}</div>
+          <div>{this.state.score}</div>
         </div>
         </div>
       </div>
     );
     
   }
+
+  playerOne = () => {
+    return(
+    <div className="tallyHolder">
+    <Tallys updateScore={this.scoreTotal} num={15}/>
+    <Tallys updateScore={this.scoreTotal} num={16}/>
+    <Tallys updateScore={this.scoreTotal} num={17}/>
+    <Tallys updateScore={this.scoreTotal} num={18}/>
+    <Tallys updateScore={this.scoreTotal} num={19}/>
+    <Tallys updateScore={this.scoreTotal} num={20}/>
+    <Tallys updateScore={this.scoreTotal} num={25}/>
+    </div>
+    )
+  }
   
   render(){
     
   return(
-  <div>
-    <div className="plyrTbl">
-    <div>{ this.tableHead() }</div>
-      <div>
-        <div className="tblDataHolder">
-          <div className='tblData'><button value="15" className="tblButtons" onClick={ this.props.update }>15</button></div>
-          <div className='tblData'>{ this.props.scoreTracker }</div>
-        </div>
-        <div className="tblDataHolder">
-          <div className='tblData'><button value="16" className="tblButtons">16</button></div>
-          <div className='tblData'>{ this.props.scoreTracker }</div>
-        </div>
-        <div className="tblDataHolder">
-          <div className='tblData'><button value="17" className="tblButtons">17</button></div>
-          <div className='tblData'>{ this.props.scoreTracker }</div>
-        </div>
-        <div className="tblDataHolder">
-          <div className='tblData'><button value="18" className="tblButtons">18</button></div>
-          <div className='tblData'>{ this.props.scoreTracker }</div>
-        </div>
-        <div className="tblDataHolder">
-          <div className='tblData'><button value="19" className="tblButtons">19</button></div>
-          <div className='tblData'>{ this.props.scoreTracker }</div>
-        </div>
-        <div className="tblDataHolder">
-          <div className='tblData'><button value="20" className="tblButtons">20</button></div>
-          <div className='tblData'>{ this.props.scoreTracker }</div>
-        </div>
-        <div className="tblDataHolder">
-          <div className='tblData'><button value="25" className="tblDataEmoji">🎯</button></div>
-          <div className='tblData'>{ this.props.scoreTracker }</div>
-        </div>
-      </div>
-      </div>
+  <div className="plyrTbl">
+    { this.tableHead() }
+    { this.playerOne() }
   </div>
       )
     }
   }
 
-export default Scoreboard;
+export default PlayerName;

@@ -40,20 +40,19 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .plyrTbl{
-  width: 18vw;
-  border: 2px solid white;
-  padding: 5vh;
+  padding: 2vw;
+  border: 2px solid black;
   background-color: #720012;
   border-radius: 25px;
   color: white;
-  margin-top: 10vh;
+  margin-top: 2vh;
 }
 .scoreBrdAlign{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: #82816D;
   height: 100vh;
+ 
 }
 .tblDataHolder{
   display: flex;
@@ -74,6 +73,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
 }
 .inputHlder > form > input{
   margin-bottom: 1vh;
@@ -116,7 +116,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .inlinePoints{
   display: flex;
@@ -124,11 +124,11 @@
   align-items: center;
   border: 3px solid white;
   border-radius: 5px;
-  padding: 1vw;
+  padding: 5px;
 }
 .inlinePoints > div{
   margin-top: -24px;
-  font-size: 32px;
+  font-size: 25px;
 }
 .inlinePoints > p{
   font-weight: bolder;
@@ -137,4 +137,41 @@
 }
 .nameAndScore > h2{
   margin-top: -20px;
+}
+.moveDown{
+  margin-top: 20px;
+}
+.inlineTally{
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+  align-items: center;
+  border: 1px solid white;
+}
+.half > button {
+  width: 70px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  margin-bottom: 17px;
+}
+.half > div {
+  font-size: 20px;
+}
+.holdAll{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #042A2B;
+  height: 100vh;
+}
+.half{
+  display: flex;
+  width: 10vw;
+  justify-content: center;
+}
+.holdAll > h1 {
+  font-size: 130px;
 }
